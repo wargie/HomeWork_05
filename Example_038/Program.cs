@@ -2,7 +2,7 @@
 
 //int size = 20;
 
-int sizeArray = new Random().Next(2, 30);
+int sizeArray = new Random().Next(2, 50);
 
 int[] FillArray(int sizeArray)
 
@@ -18,19 +18,19 @@ int[] FillArray(int sizeArray)
         return array;
     }
 
-void PrintArrayAndSum(int[] arr)
+void PrintArrayOddSum(int[] arr)
+
 {
     int sum = 0;
-    System.Console.WriteLine();
+    
         for (int i = 0; i < sizeArray; i++)
 
             {
-                System.Console.Write(arr[i] + " ");
+                Console.Write(arr[i] + " ");
                 if (i % 2 > 0) sum += arr[i];
             }
-            
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Сумма чисел, стоящих на нечетной позиции, соcтаваляет {sum} ");
+    Console.WriteLine();
+    Console.WriteLine($"Сумма чисел, стоящих на нечетной позиции, соcтаваляет {sum} ");
 }
 
-PrintArrayAndSum(FillArray(sizeArray));
+PrintArrayOddSum(FillArray(sizeArray));
